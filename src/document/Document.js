@@ -10,7 +10,7 @@ exports.swagger_options = {
             description: 'Blog api management (Enter Auth api => Bearer + token)',
             contact: {
                 name: 'Vo Dinh Nghia',
-                url: 'http://139.180.147.78:8888/',
+                url: 'https://blogofme.store/',
                 email: 'vodinhnghia85@gmail.com'
             }
         },
