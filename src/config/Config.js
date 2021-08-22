@@ -11,8 +11,8 @@ exports.ConfigDB = {
         client: 'mysql',
         connection: {
             host: process.env.MYSQL_HOST || 'localhost',
-            user: process.env.MYSQL_USER || 'root',
-            password: process.env.MYSQL_PASS || 'root',
+            user: process.env.MYSQL_USER || '****',
+            password: process.env.MYSQL_PASS || '*****',
             database: process.env.MYSQL_DB || 'api_blog',
             charset: 'utf8mb4',
             port: process.env.MYSQL_PORT || '3306',
@@ -35,12 +35,12 @@ exports.ConfigDB = {
 
 exports.ConfigMail = {
     Email: 'sciencepost95@gmail.com',
-    PassWord: 'SciencePost95'
+    PassWord: '******'
 }
 
 exports.ConfigKeySecret = {
-    accessTokenSecret: "access-token-secret-dog1-vodinhnghia85@gmail.com-green-cat2-a@",
+    accessTokenSecret: "***********************************",
     accessTokenLife: "2h",
     refreshTokenLife: "3650d",
-    refreshTokenSecret: "refresh-token-secret-dog1-vodinhnghia85@gmail.com-green-cat2-a@"
+    refreshTokenSecret: "******************************************************************"
 }
