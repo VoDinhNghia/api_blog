@@ -1,0 +1,48 @@
+let ListErr = async(req, res) => {
+    return res.status(200).json({
+        Code_399: "Account blocked.",
+        Code_401: 'Unauthorized.',
+        Code_402: "Username or password invalid.",
+        Code_403: "No token provided.",
+        Code_404: "page not found.",
+        Code_405: "Miss params email or password.",
+        Code_406: "Unauthorized or token expired, please check token.",
+        Code_407: "Body null or params not exactly.",
+        Code_408: "This is email already exists.",
+        Code_500: "Server interval.",
+        Code_501: "Length of password must >= 6.",
+        Code_505: "User logout, please login against.",
+        Code_506: "Miss params new_password.",
+        Code_507: "Current password invalid.",
+        Code_508: "Current password duplicate with new password.",
+        Code_509: "Miss params id.",
+        Code_510: "This user not found.",
+        Code_511: "Get password exceed 2 per day.",
+        Code_512: "Security error, please go to google account settings page to install the security section",
+        Code_513: "The account has not been registered.",
+        Code_514: "Not found post.",
+        Code_515: "Query params null.",
+        Code_516: "This is post not delete, please delete post yourself.",
+        Code_517: "This is topic exist already.",
+        Code_518: "This is topic not exists.",
+        Code_519: "Not found solution.",
+        Code_520: "This solution Not delete because it's not of your solution.",
+        Code_521: "You can't fllow yourself.",
+        Code_522: "This is avatar not found in list your avatar.",
+        Code_523: "This is can not notify because It is not found.",
+        Code_524: "Can't remove follow because this person your follow not yet.",
+        Code_525: "Can't remove topic because this topic not found in list your topic.",
+        Code_526: "Can't restore topic because this topic not found in list your topic.",
+        Code_527: "This is topic not found in your list topic.",
+        Code_528: "This is problem not found in your list topic => can't list solution.",
+        Code_529: "This is problem not found in your list topic => can't get info of problem.",
+        Code_530: "This email not exists, please enter real email.",
+        Code_531: "Not found problem.",
+        Code_532: "This problem Not delete because it's not of your problem.",
+        Code_533: "Please remove all problem."
+    })
+}
+
+module.exports = {
+    ListErr: ListErr,
+}

@@ -1,0 +1,17 @@
+401: Unauthorized.
+402: Username or password invalid.
+403: No token provided.
+404: page not found.
+405: Miss params username or password.
+406: Unauthorized or token expired, please check token.
+407: Body null.
+408: This is email already exists.
+500: Server interval.
+501: Length of password must >= 6.
+505: User logout, please login against.
+506: Miss params new_password.
+507: Current password invalid.
+508: Current password duplicate with new password.
+509: Miss params id.
+510: This user not found.
+511: Get password exceed 2 per day.
