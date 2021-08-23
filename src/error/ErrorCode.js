@@ -277,7 +277,20 @@ let Error_399 = async(req, res) => {
         message: "Account blocked."
     });
 }
-
+let Error_533 = async(req, res) => {
+    return res.status(200).json({
+        status: false,
+        code: 533,
+        message: "Number phone must is 10."
+    });
+}
+let Error_534 = async(req, res) => {
+    return res.status(200).json({
+        status: false,
+        code: 534,
+        message: "Number phone must is type int."
+    });
+}
 
 module.exports = {
     Error_399: Error_399,
@@ -319,5 +332,6 @@ module.exports = {
     Error_530: Error_530,
     Error_531: Error_531,
     Error_532: Error_532,
-    // Error_533: Error_533
+    Error_533: Error_533,
+    Error_534: Error_534
 }
