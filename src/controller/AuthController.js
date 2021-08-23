@@ -98,25 +98,34 @@ let register = async(req, res) => {
                         return ErrorCode.Error_501(req, res)
                     } else {
                         let checkEmail = crypto.ReplaceCharScriptFromForm(req.body.Email);
-                        let SignUpToData = await db.InsertData('user', {
-                            Name: req.body.UserName,
-                            Password: crypto.CryptoPass(req.body.PassWord),
-                            Token: "",
-                            Email: checkEmail,
-                            Mobile: req.body.Mobile,
-                            Gender: req.body.Gender || 1,
-                            Level: 0, // user bình thường, nếu 1 là admin
-                            Status: 0, // 1: action, 0: logout
-                            CreateAt: dateFormat(new Date(), "dd mm yyyy HH:MM:ss"),
-                            DateUpdate: '',
-                            Avatar: '',
-                            Country: ''
-                        });
-                        return res.status(200).json({
-                            status: true,
-                            code: 0,
-                            message: "register success."
-                        });
+                        let checkNumberPhone = '';
+                        if ((typeof req.body.Mobile) != 'number') {
+                            console.log(typeof req.body.Mobile);
+                            return ErrorCode.Error_534(req, res)
+                        } else if ((req.body.Mobile).toString().length > 10) {
+                            return ErrorCode.Error_533(req, res)
+                        } else {
+                            checkNumberPhone = req.body.Mobile
+                            let SignUpToData = await db.InsertData('user', {
+                                Name: req.body.UserName,
+                                Password: crypto.CryptoPass(req.body.PassWord),
+                                Token: "",
+                                Email: checkEmail,
+                                Mobile: req.body.Mobile,
+                                Gender: req.body.Gender || 1,
+                                Level: 0, // user bình thường, nếu 1 là admin
+                                Status: 0, // 1: action, 0: logout
+                                CreateAt: dateFormat(new Date(), "dd mm yyyy HH:MM:ss"),
+                                DateUpdate: '',
+                                Avatar: '',
+                                Country: ''
+                            });
+                            return res.status(200).json({
+                                status: true,
+                                code: 0,
+                                message: "register success."
+                            });
+                        }
                     }
                 }
             } catch (error) {
