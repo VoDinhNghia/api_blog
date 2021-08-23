@@ -39,7 +39,9 @@ let ListErr = async(req, res) => {
         Code_530: "This email not exists, please enter real email.",
         Code_531: "Not found problem.",
         Code_532: "This problem Not delete because it's not of your problem.",
-        Code_533: "Please remove all problem."
+        Code_533: "Please remove all problem.",
+        Code_533: "Number phone must is 10.",
+        Code_534: "Number phone must is type int."
     })
 }
 
